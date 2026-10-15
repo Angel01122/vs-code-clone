@@ -3,148 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Studio Code - Code Editing. Redefined.</title>
+    <title>Visual Studio Code - The Open Source AI Code Editor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Top Announcement Banner -->
-    <div class="announcement-banner">
-        <span>Version 1.88 is now available! Read about the new features and fixes.</span>
-        <a href="#features">Check out what's new →</a>
-    </div>
-
-    <!-- Navigation Bar -->
+    <!-- Header Navigation -->
     <header class="navbar">
         <div class="nav-left">
-            <span class="logo-icon">🅥</span>
-            <span class="logo-text">Visual Studio Code</span>
+            <span class="logo">Visual Studio Code</span>
             <nav class="nav-links">
-                <a href="#features">Docs</a>
-                <a href="#extensions">Extensions</a>
-                <a href="#faq">FAQ</a>
+                <a href="#">Features</a>
+                <a href="#">Docs</a>
+                <a href="#">Release Notes</a>
                 <a href="#">Blog</a>
+                <a href="#">Learn</a>
+                <a href="#">Events</a>
+                <a href="#">Resources</a>
             </nav>
         </div>
         <div class="nav-right">
-            <input type="text" placeholder="Search Docs..." class="search-input" />
-            <button class="btn-download" onclick="downloadNotice()">Download</button>
+            <button class="btn-download-top" onclick="handleDownload()">Download</button>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-badge">
-            <span class="badge-tag">Free</span>
-            <span>Built on open source. Instrumented for everyone.</span>
-        </div>
-        
-        <h1>Code editing. <span class="highlight">Redefined.</span></h1>
-        
-        <p class="hero-desc">
-            Free and built on open source. Integrated Git control, syntax highlighting, intelligent code completion with IntelliSense, snippets, and code refactoring.
-        </p>
+        <h1 class="main-title">The Open Source AI Code Editor</h1>
+        <p class="sub-title">Your Home For Multi-Agent Development</p>
 
-        <!-- Main Download CTA Button -->
-        <div class="hero-cta">
-            <button class="btn-main" onclick="downloadNotice()">
-                <div class="btn-main-title">Download for Windows</div>
-                <div class="btn-main-sub">Stable Build</div>
+        <!-- Download Card Box -->
+        <div class="download-card">
+            <button class="btn-download-main" onclick="handleDownload()">
+                Downloads For Windows
             </button>
-            <div class="platforms">
-                <span>Also available for:</span>
-                <a href="#" onclick="downloadNotice()">Mac</a> &bull;
-                <a href="#" onclick="downloadNotice()">Linux</a>
+            <div class="download-sublinks">
+                <a href="#" onclick="handleDownload()">Web</a>, 
+                <a href="#" onclick="handleDownload()">Insiders Edition</a> Or 
+                <a href="#" onclick="handleDownload()">other Platforms</a>
             </div>
+            <p class="disclaimer">
+                By Using VS Code, You Agree To Its <a href="#">License</a> And <a href="#">Privacy Statement</a>
+            </p>
         </div>
 
-        <!-- Realistic Code Editor Mockup -->
-        <div class="editor-window">
-            <div class="window-titlebar">
-                <div class="window-dots">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                </div>
-                <div class="file-tab">index.js - Visual Studio Code</div>
-                <div class="window-spacer"></div>
+        <!-- Code Editor Mockup Box -->
+        <div class="editor-frame">
+            <div class="editor-header">
+                <span class="tab active">MailList.tsx</span>
+                <span class="tab-space"></span>
+                <span class="header-label">REFACTOR MAILLIST COMPONENT</span>
+                <span class="header-label">SESSIONS</span>
             </div>
-
             <div class="editor-body">
-                <!-- Sidebar Explorer -->
-                <div class="editor-sidebar">
-                    <div class="sidebar-title">Explorer</div>
-                    <div class="sidebar-file active">📄 index.js</div>
-                    <div class="sidebar-file">📄 index.html</div>
-                    <div class="sidebar-file">📄 style.css</div>
-                    <div class="sidebar-file">⚙️ package.json</div>
-                </div>
-
-                <!-- Code Content area -->
-                <div class="editor-content">
+                <!-- Sidebar Code Area -->
+                <div class="code-panel">
                     <div class="line-numbers">
-                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8
+                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9
                     </div>
-                    <pre class="code-text"><code><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">'express'</span>;
-<span class="keyword">const</span> app = <span class="function">express</span>();
-<span class="keyword">const</span> PORT = process.env.PORT || <span class="number">3000</span>;
-
-app.<span class="function">get</span>(<span class="string">'/'</span>, (req, res) => {
-    res.<span class="function">json</span>({ message: <span class="string">"Welcome to VS Code!"</span> });
-});
-
-app.<span class="function">listen</span>(PORT, () => console.<span class="function">log</span>(`Server running on port ${PORT}`));</code></pre>
+                    <pre class="code-content"><code><span class="kw">import</span> {
+  For,
+  Show,
+  createMemo,
+  createSignal
+} <span class="kw">from</span> <span class="str">"solid-js"</span>;
+<span class="kw">import</span> { useMail } <span class="kw">from</span> <span class="str">"./mail"</span>;</code></pre>
                 </div>
-            </div>
 
-            <!-- Terminal Footer -->
-            <div class="editor-terminal">
-                <div class="term-tabs">
-                    <span class="term-tab active">TERMINAL</span>
-                    <span class="term-tab">PROBLEMS</span>
-                    <span class="term-tab">OUTPUT</span>
+                <!-- AI Multi-Agent Session Area -->
+                <div class="ai-panel">
+                    <button class="btn-session">+ New Session</button>
+                    <div class="session-item active">
+                        <span class="dot"></span> Refactor MailList component
+                        <div class="status">Thinking...</div>
+                    </div>
+                    <div class="session-item">
+                        <span class="dot"></span> Wire MCP server for telemetry
+                        <div class="status">Editing mcp.config.ts</div>
+                    </div>
                 </div>
-                <div class="term-status">🟢 Node v20.11.0</div>
             </div>
         </div>
     </section>
-
-    <!-- Features Bento Section -->
-    <section id="features" class="features-section">
-        <h2>Any language, any platform. Built for scale.</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3>IntelliSense for Code</h3>
-                <p>Go beyond syntax highlighting with smart completions based on variable types, function definitions, and imported modules.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔧</div>
-                <h3>Debugging & Git Built-in</h3>
-                <p>Debug code right from the editor. Review diffs, stage files, and make commits with built-in Git integration.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🧩</div>
-                <h3>Thousands of Extensions</h3>
-                <p>Customize your environment with themes, debuggers, language packs, and tools to supercharge your workflow.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div>
-                <h4>Visual Studio Code</h4>
-                <p>&copy; Microsoft Corporation. All rights reserved.</p>
-            </div>
-            <div>
-                <a href="#">Support</a>
-                <a href="#">Privacy</a>
-                <a href="#">Terms of Use</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
