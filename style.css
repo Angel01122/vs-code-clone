@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #111111;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #181818;
+    border-bottom: 1px solid #222;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.btn-download {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-download:hover {
+    background-color: #0062a3;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    background-color: #222;
+    color: #007acc;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #007acc;
+}
+
+.hero p {
+    color: #888888;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-main:hover {
+    background-color: #0062a3;
+}
+
+/* Code Box Mockup */
+.code-box {
+    margin-top: 50px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.window-header {
+    background-color: #2
