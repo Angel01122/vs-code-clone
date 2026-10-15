@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code - Code Editing. Redefined.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo-area">
+            <span class="logo-text">Visual Studio Code</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#features">Docs</a>
+            <a href="#extensions">Extensions</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-right">
+            <button class="btn-download" onclick="downloadNotice()">Download</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="badge">Version 1.88 is now available</span>
+        <h1>Code editing. <span>Redefined.</span></h1>
+        <p>Free and built on open source. Integrated Git control, syntax highlighting, intelligent code completion, and more.</p>
+        
+        <button class="btn-main" onclick="downloadNotice()">Download for Windows</button>
+
+        <!-- Simple Code Box Mockup -->
+        <div class="code-box">
+            <div class="window-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="file-title">index.js</span>
+            </div>
+            <pre class="code-content"><code><span class="keyword">const</span> express = <span class="function">require</span>(<span class="string">'express'</span>);
+<span class="keyword">const</span> app = <span class="function">express</span>();
+
+app.<span class="function">get</span>(<span class="string">'/'</span>, (req, res) => {
+    res.<span class="function">send</span>(<span class="string">'Hello World!'</span>);
+});
+
+app.<span class="function">listen</span>(<span class="number">3000</span>);</code></pre>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Any language, any platform</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>IntelliSense</h3>
+                <p>Smart completions based on variable types, function definitions, and imported modules.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Debugging</h3>
+                <p>Debug your code right from the editor with breakpoints, call stacks, and an interactive console.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Git Built-in</h3>
+                <p>Review diffs, stage files, and make commits right from the editor out-of-the-box.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Microsoft Corporation. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
