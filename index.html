@@ -8,70 +8,142 @@
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- Top Announcement Banner -->
+    <div class="announcement-banner">
+        <span>Version 1.88 is now available! Read about the new features and fixes.</span>
+        <a href="#features">Check out what's new →</a>
+    </div>
+
+    <!-- Navigation Bar -->
     <header class="navbar">
-        <div class="logo-area">
+        <div class="nav-left">
+            <span class="logo-icon">🅥</span>
             <span class="logo-text">Visual Studio Code</span>
+            <nav class="nav-links">
+                <a href="#features">Docs</a>
+                <a href="#extensions">Extensions</a>
+                <a href="#faq">FAQ</a>
+                <a href="#">Blog</a>
+            </nav>
         </div>
-        <nav class="nav-links">
-            <a href="#features">Docs</a>
-            <a href="#extensions">Extensions</a>
-            <a href="#faq">FAQ</a>
-        </nav>
         <div class="nav-right">
+            <input type="text" placeholder="Search Docs..." class="search-input" />
             <button class="btn-download" onclick="downloadNotice()">Download</button>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <span class="badge">Version 1.88 is now available</span>
-        <h1>Code editing. <span>Redefined.</span></h1>
-        <p>Free and built on open source. Integrated Git control, syntax highlighting, intelligent code completion, and more.</p>
+        <div class="hero-badge">
+            <span class="badge-tag">Free</span>
+            <span>Built on open source. Instrumented for everyone.</span>
+        </div>
         
-        <button class="btn-main" onclick="downloadNotice()">Download for Windows</button>
+        <h1>Code editing. <span class="highlight">Redefined.</span></h1>
+        
+        <p class="hero-desc">
+            Free and built on open source. Integrated Git control, syntax highlighting, intelligent code completion with IntelliSense, snippets, and code refactoring.
+        </p>
 
-        <!-- Simple Code Box Mockup -->
-        <div class="code-box">
-            <div class="window-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="file-title">index.js</span>
+        <!-- Main Download CTA Button -->
+        <div class="hero-cta">
+            <button class="btn-main" onclick="downloadNotice()">
+                <div class="btn-main-title">Download for Windows</div>
+                <div class="btn-main-sub">Stable Build</div>
+            </button>
+            <div class="platforms">
+                <span>Also available for:</span>
+                <a href="#" onclick="downloadNotice()">Mac</a> &bull;
+                <a href="#" onclick="downloadNotice()">Linux</a>
             </div>
-            <pre class="code-content"><code><span class="keyword">const</span> express = <span class="function">require</span>(<span class="string">'express'</span>);
+        </div>
+
+        <!-- Realistic Code Editor Mockup -->
+        <div class="editor-window">
+            <div class="window-titlebar">
+                <div class="window-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <div class="file-tab">index.js - Visual Studio Code</div>
+                <div class="window-spacer"></div>
+            </div>
+
+            <div class="editor-body">
+                <!-- Sidebar Explorer -->
+                <div class="editor-sidebar">
+                    <div class="sidebar-title">Explorer</div>
+                    <div class="sidebar-file active">📄 index.js</div>
+                    <div class="sidebar-file">📄 index.html</div>
+                    <div class="sidebar-file">📄 style.css</div>
+                    <div class="sidebar-file">⚙️ package.json</div>
+                </div>
+
+                <!-- Code Content area -->
+                <div class="editor-content">
+                    <div class="line-numbers">
+                        1<br>2<br>3<br>4<br>5<br>6<br>7<br>8
+                    </div>
+                    <pre class="code-text"><code><span class="keyword">import</span> express <span class="keyword">from</span> <span class="string">'express'</span>;
 <span class="keyword">const</span> app = <span class="function">express</span>();
+<span class="keyword">const</span> PORT = process.env.PORT || <span class="number">3000</span>;
 
 app.<span class="function">get</span>(<span class="string">'/'</span>, (req, res) => {
-    res.<span class="function">send</span>(<span class="string">'Hello World!'</span>);
+    res.<span class="function">json</span>({ message: <span class="string">"Welcome to VS Code!"</span> });
 });
 
-app.<span class="function">listen</span>(<span class="number">3000</span>);</code></pre>
+app.<span class="function">listen</span>(PORT, () => console.<span class="function">log</span>(`Server running on port ${PORT}`));</code></pre>
+                </div>
+            </div>
+
+            <!-- Terminal Footer -->
+            <div class="editor-terminal">
+                <div class="term-tabs">
+                    <span class="term-tab active">TERMINAL</span>
+                    <span class="term-tab">PROBLEMS</span>
+                    <span class="term-tab">OUTPUT</span>
+                </div>
+                <div class="term-status">🟢 Node v20.11.0</div>
+            </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <h2>Any language, any platform</h2>
+    <!-- Features Bento Section -->
+    <section id="features" class="features-section">
+        <h2>Any language, any platform. Built for scale.</h2>
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>IntelliSense</h3>
-                <p>Smart completions based on variable types, function definitions, and imported modules.</p>
+                <div class="feature-icon">⚡</div>
+                <h3>IntelliSense for Code</h3>
+                <p>Go beyond syntax highlighting with smart completions based on variable types, function definitions, and imported modules.</p>
             </div>
             <div class="feature-card">
-                <h3>Debugging</h3>
-                <p>Debug your code right from the editor with breakpoints, call stacks, and an interactive console.</p>
+                <div class="feature-icon">🔧</div>
+                <h3>Debugging & Git Built-in</h3>
+                <p>Debug code right from the editor. Review diffs, stage files, and make commits with built-in Git integration.</p>
             </div>
             <div class="feature-card">
-                <h3>Git Built-in</h3>
-                <p>Review diffs, stage files, and make commits right from the editor out-of-the-box.</p>
+                <div class="feature-icon">🧩</div>
+                <h3>Thousands of Extensions</h3>
+                <p>Customize your environment with themes, debuggers, language packs, and tools to supercharge your workflow.</p>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; Microsoft Corporation. All rights reserved.</p>
+        <div class="footer-content">
+            <div>
+                <h4>Visual Studio Code</h4>
+                <p>&copy; Microsoft Corporation. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="#">Support</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
